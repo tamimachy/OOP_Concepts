@@ -1,0 +1,14 @@
+h:\University\OOP\OOP_Concepts\Classes\bin\Debug\net9.0\Classes.exe
+H:\University\OOP\OOP_Concepts\Classes\bin\Debug\net9.0\Classes.deps.json
+H:\University\OOP\OOP_Concepts\Classes\bin\Debug\net9.0\Classes.runtimeconfig.json
+h:\University\OOP\OOP_Concepts\Classes\bin\Debug\net9.0\Classes.dll
+h:\University\OOP\OOP_Concepts\Classes\bin\Debug\net9.0\Classes.pdb
+h:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+h:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\Classes.AssemblyInfoInputs.cache
+h:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\Classes.AssemblyInfo.cs
+h:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\Classes.csproj.CoreCompileInputs.cache
+h:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\Classes.dll
+h:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\refint\Classes.dll
+h:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\Classes.pdb
+H:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\Classes.genruntimeconfig.cache
+H:\University\OOP\OOP_Concepts\Classes\obj\Debug\net9.0\ref\Classes.dll
