@@ -10,7 +10,18 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // var person = Person.Parse("John");
+            var customer = new Customer();
+            customer.Id = 1;
+            customer.Name = "Mosh";
+
+            var order = new Order();
+            customer.Orders = new List<Order>();
+            customer.Orders.Add(order);
+
+            Console.WriteLine(customer.Id);
+            Console.WriteLine(customer.Name);
+            //person.Introduce("Mosh");
         }
     }
 }
