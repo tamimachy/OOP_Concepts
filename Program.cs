@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Program
 {
-    class Program
+    partial class Program
     {
         public class Calculator
         {
@@ -35,12 +34,18 @@ namespace Program
             //person.Introduce("Mosh");
 
             //var number = int.Parse("abc");
-            int number;
-            var result = int.TryParse("abc", out number);
-            if(result)
-                Console.WriteLine(number);
-            else
-                Console.WriteLine("Conversion failed.");
+            //int number;
+            //var result = int.TryParse("abc", out number);
+            //if(result)
+            //    Console.WriteLine(number);
+            //else
+            //    Console.WriteLine("Conversion failed.");
+            var customer = new Customer(1);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
+
+            customer.Promote();
+            Console.WriteLine(customer.Orders.Count);
 
 
 
