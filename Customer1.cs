@@ -10,7 +10,7 @@ namespace Program
             public string Name;
             public readonly List<Order> Orders = new List<Order>() ;
 
-            public Customer(int id)
+            public Customer(int id) 
             {
                 this.Id = id;
             }

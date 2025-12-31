@@ -5,6 +5,19 @@ using System.Threading.Tasks;
 
 namespace Program
 {
+    public class Person
+    {
+        private DateTime _birthdate;
+        public void SetBirthdate(DateTime birthdate)
+        {
+            _birthdate = birthdate;
+        }
+        public DateTime GetBirtdate()
+        {
+            return _birthdate;
+        }
+    }
+
     public partial class Program
     {
         static void Main(string[] args)
@@ -21,39 +34,33 @@ namespace Program
             // Console.WriteLine(customer.Name);
             // person.Introduce("Mosh");
 
-            // var number = int.Parse("abc");
-            // int number;
-            // var result = int.TryParse("abc", out number);
-            // if(result)
+            //try
+            //{
+            //    var num = int.Parse("abc");
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("Coversion failed.");
+            //}
+
+            //int number;
+            //var result = int.TryParse("abc", out number);
+            //if (result)
+            //{
             //    Console.WriteLine(number);
-            // else
-            //    Console.WriteLine("Conversion failed.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Conversiona Failed.");
+            //}
+
             var customer = new Customer(1);
             customer.Orders.Add(new Order());
             customer.Orders.Add(new Order());
 
             customer.Promote();
             Console.WriteLine(customer.Orders.Count);
-
-            try
-            {
-                var num = int.Parse("abc");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Coversion failed.");
-            }
-
-            int number;
-            var result = int.TryParse("abc", out number);
-            if (result)
-            {
-                Console.WriteLine(number);
-            }
-            else
-            {
-                Console.WriteLine("Conversiona Failed.");
-            }
+                        
         }
         static void UseParams()
         {
