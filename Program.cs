@@ -5,40 +5,28 @@ using System.Threading.Tasks;
 
 namespace Program
 {
-    partial class Program
+    public partial class Program
     {
-        public class Calculator
-        {
-            public int Add(params int[] numbers)
-            {
-                var sum = 0;
-                foreach (var number in numbers)
-                    sum += number;
-
-                return sum;
-            }
-        }
         static void Main(string[] args)
         {
             // var person = Person.Parse("John");
-            //var customer = new Customer();
-            //customer.Id = 1;
-            //customer.Name = "Mosh";
+            // var customer = new Customer();
+            // customer.Id = 1;
+            // customer.Name = "Mosh";
+            // var order = new Order();
+            // customer.Orders = new List<Order>();
+            // customer.Orders.Add(order);
 
-            //var order = new Order();
-            //customer.Orders = new List<Order>();
-            //customer.Orders.Add(order);
+            // Console.WriteLine(customer.Id);
+            // Console.WriteLine(customer.Name);
+            // person.Introduce("Mosh");
 
-            //Console.WriteLine(customer.Id);
-            //Console.WriteLine(customer.Name);
-            //person.Introduce("Mosh");
-
-            //var number = int.Parse("abc");
-            //int number;
-            //var result = int.TryParse("abc", out number);
-            //if(result)
+            // var number = int.Parse("abc");
+            // int number;
+            // var result = int.TryParse("abc", out number);
+            // if(result)
             //    Console.WriteLine(number);
-            //else
+            // else
             //    Console.WriteLine("Conversion failed.");
             var customer = new Customer(1);
             customer.Orders.Add(new Order());
@@ -47,8 +35,25 @@ namespace Program
             customer.Promote();
             Console.WriteLine(customer.Orders.Count);
 
+            try
+            {
+                var num = int.Parse("abc");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Coversion failed.");
+            }
 
-
+            int number;
+            var result = int.TryParse("abc", out number);
+            if (result)
+            {
+                Console.WriteLine(number);
+            }
+            else
+            {
+                Console.WriteLine("Conversiona Failed.");
+            }
         }
         static void UseParams()
         {
@@ -56,8 +61,8 @@ namespace Program
             Console.WriteLine(calculator.Add(1, 2));
             Console.WriteLine(calculator.Add(1, 2, 3));
             Console.WriteLine(calculator.Add(1, 2, 3, 4));
-            Console.WriteLine(calculator.Add(1, 2, 3, 4, 5));
-
+            Console.WriteLine(calculator.Add(new int[] { 1, 2, 3, 4 }));
+            
         }
         static void UsePoints()
         {
