@@ -1,23 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Program
 {
-    public class Person
+    public class HttpCookie
     {
-        private DateTime _birthdate;
-        public void SetBirthdate(DateTime birthdate)
+        private Dictionary<string, string> _dictionary;
+        public HttpCookie()
         {
-            _birthdate = birthdate;
+            _dictionary = new Dictionary<string, string>();
         }
-        public DateTime GetBirtdate()
+        public string this[string key]
         {
-            return _birthdate;
+            get { return _dictionary[key]; }
+            set { _dictionary[key] = value; }
         }
     }
-
     public partial class Program
     {
         static void Main(string[] args)
@@ -54,12 +55,19 @@ namespace Program
             //    Console.WriteLine("Conversiona Failed.");
             //}
 
-            var customer = new Customer(1);
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
+            //var customer = new Customer(1);
+            //customer.Orders.Add(new Order());
+            //customer.Orders.Add(new Order());
 
-            customer.Promote();
-            Console.WriteLine(customer.Orders.Count);
+            //customer.Promote();
+            //Console.WriteLine(customer.Orders.Count);
+
+            //var person = new Person1();
+            //person.SetBirthdate(new DateTime(1982, 1, 1));
+            //Console.WriteLine(person.GetBirtdate());
+
+            var properties = new Properties(new DateTime(2002, 5, 5));
+            Console.WriteLine(properties.Age);
                         
         }
         static void UseParams()
