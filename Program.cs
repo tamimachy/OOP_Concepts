@@ -8,11 +8,20 @@ namespace Program
 {
     public class HttpCookie
     {
-        private Dictionary<string, string> _dictionary;
+        private readonly Dictionary<string, string> _dictionary;
+        public DateTime Expiry { get; set; }
         public HttpCookie()
         {
             _dictionary = new Dictionary<string, string>();
         }
+        public void SetItem(string key, string value)
+        {
+
+        }
+        //public string GetItem(string key)
+        //{
+
+        //}
         public string this[string key]
         {
             get { return _dictionary[key]; }
@@ -68,6 +77,9 @@ namespace Program
 
             var properties = new Properties(new DateTime(2002, 5, 5));
             Console.WriteLine(properties.Age);
+            var cookie = new HttpCookie();
+            cookie["name"] = "Tamima";
+            Console.WriteLine(cookie["name"]);
                         
         }
         static void UseParams()
