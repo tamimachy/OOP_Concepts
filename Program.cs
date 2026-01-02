@@ -58,9 +58,16 @@ namespace Program
             //cookie["name"] = "Tamima";
             //Console.WriteLine(cookie["name"]);
 
-            var text = new Inheritance.Text();
-            text.Width = 100;
-            text.Copy();
+            //var text = new Inheritance.Text();
+            //text.Width = 100;
+            //text.Copy();
+
+            var dbMigrator = new Composition.DbMigrator(new Composition.Logger());
+            var logger = new Composition.Logger();
+            var installer = new Composition.Installer(logger);
+            dbMigrator.Migrate();
+            installer.Install();
+
 
         }
         static void UseParams()
