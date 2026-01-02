@@ -1,33 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Program
 {
-    public class HttpCookie
-    {
-        private readonly Dictionary<string, string> _dictionary;
-        public DateTime Expiry { get; set; }
-        public HttpCookie()
-        {
-            _dictionary = new Dictionary<string, string>();
-        }
-        public void SetItem(string key, string value)
-        {
-
-        }
-        //public string GetItem(string key)
-        //{
-
-        //}
-        public string this[string key]
-        {
-            get { return _dictionary[key]; }
-            set { _dictionary[key] = value; }
-        }
-    }
     public partial class Program
     {
         static void Main(string[] args)
@@ -75,12 +52,16 @@ namespace Program
             //person.SetBirthdate(new DateTime(1982, 1, 1));
             //Console.WriteLine(person.GetBirtdate());
 
-            var properties = new Properties(new DateTime(2002, 5, 5));
-            Console.WriteLine(properties.Age);
-            var cookie = new HttpCookie();
-            cookie["name"] = "Tamima";
-            Console.WriteLine(cookie["name"]);
-                        
+            //var properties = new Properties(new DateTime(2002, 5, 5));
+            //Console.WriteLine(properties.Age);
+            //var cookie = new HttpCookie();
+            //cookie["name"] = "Tamima";
+            //Console.WriteLine(cookie["name"]);
+
+            var text = new Inheritance.Text();
+            text.Width = 100;
+            text.Copy();
+
         }
         static void UseParams()
         {

@@ -46,6 +46,8 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Customer1.cs" />
+    <Compile Include="HttpCookie.cs" />
+    <Compile Include="Inheritance.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Person1.cs" />
